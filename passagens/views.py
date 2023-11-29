@@ -1,5 +1,10 @@
 from django.shortcuts import render, redirect
 from .forms import PassagemForms, PessoaForms
+from rest_framework import viewsets, generics
+from passagens.models import *
+from passagens.serializer import *
+from rest_framework.authentication import *
+from rest_framework.permissions import *
 
 def index(request):
     form = PassagemForms()
